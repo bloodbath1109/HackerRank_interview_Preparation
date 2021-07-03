@@ -1,0 +1,16 @@
+int count_arr[101]={0};
+
+int sockMerchant(int n, int ar_count, int* ar) {
+    
+    int pairs = 0;
+    for(int i = 0; i < n; i++)
+    {
+        count_arr[ar[i]]++;
+    }
+    for(int i = 0; i < 101; i++)
+    {
+            pairs += count_arr[i]/2;
+    }
+    return pairs;
+
+}

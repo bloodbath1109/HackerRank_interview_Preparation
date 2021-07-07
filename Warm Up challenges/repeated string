@@ -1,0 +1,21 @@
+long repeatedString(char* s, long n) {
+
+    long count = 0;
+    long size = (long)strlen(s);
+    long sets = (long)n/size;
+    long rem = (long)n%size;
+    int a_count = 0;
+    for(int i = 0; i < size; i++)
+        if(s[i] == 'a')
+            a_count++;
+    count += ((long)a_count * sets);
+    for(int i = 0; i < rem; i++)
+    {
+        if(s[i] == 'a')
+            count++;
+    }
+    return count;
+
+
+
+}
